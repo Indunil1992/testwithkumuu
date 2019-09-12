@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "testwithkumuu/lambda.js",
-        "code": "exports.handler = function (event, context, callback) {\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "exports.handler = function (event, context, callback) {\n\n    callback(null, { \"message\": \"Successfully executed iiiiiiiiiii\" });\n}",
         "config": {
           "runtime": "nodejs10.x",
           "handler": "handler",
@@ -33,15 +33,7 @@
         "triggers": [],
         "customSecurityPolicy": {
           "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Resource": "arn:aws:codestar:us-east-1::/",
-              "Action": [
-                "*"
-              ]
-            }
-          ]
+          "Statement": []
         }
       }
     },
@@ -125,20 +117,7 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {
-        "aws-sdk": {
-          "name": "aws-sdk",
-          "language": "javascript",
-          "version": "2.176.0",
-          "dev": true,
-          "notRemovable": false
-        },
-        "test": {
-          "name": "test",
-          "version": "0.6.0",
-          "language": "javascript"
-        }
-      }
+      "dependencies": {}
     }
   },
   "PROJECT_META": {
@@ -148,7 +127,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568284424609
+    "lastSave": 1568284831844
   },
   "VCS_STATE": {
     "provider": "GitHub",
