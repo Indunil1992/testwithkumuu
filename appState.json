@@ -1,0 +1,152 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "bf41ff69-a368-48b9-92c2-68a81357b46c": {
+        "id": "bf41ff69-a368-48b9-92c2-68a81357b46c",
+        "parent": null,
+        "name": "testwithkumuu",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "86a4d05c-439c-4779-a668-3d79592d23aa"
+        ],
+        "isRemovable": false,
+        "filePath": "testwithkumuu"
+      },
+      "86a4d05c-439c-4779-a668-3d79592d23aa": {
+        "id": "86a4d05c-439c-4779-a668-3d79592d23aa",
+        "parent": "bf41ff69-a368-48b9-92c2-68a81357b46c",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "testwithkumuu/lambda.js",
+        "code": "let AWS = require('aws-sdk');\nconst s3 = new AWS.S3();\n\nexports.handler = function (event, context, callback) {\n    s3.listObjects({\n        'Bucket': 'test.indunil1',\n        'MaxKeys': 10,\n        'Prefix': ''\n    }).promise()\n        .then(data => {\n            console.log(data);           // successful response\n            /*\n            data = {\n                Contents: [\n                    {\n                       ETag: \"\\\"70ee1738b6b21e2c8a43f3a5ab0eee71\\\"\",\n                       Key: \"example1.jpg\",\n                       LastModified: \"<Date Representation>\",\n                       Owner: {\n                          DisplayName: \"myname\",\n                          ID: \"12345example25102679df27bb0ae12b3f85be6f290b936c4393484be31bebcc\"\n                       },\n                       Size: 11,\n                       StorageClass: \"STANDARD\"\n                    },\n                    // {...}\n                ]\n            }\n            */\n        })\n        .catch(err => {\n            console.log(err, err.stack); // an error occurred\n        });\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 200,
+          "memory": 1024,
+          "layers": []
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1sachithraAPInameindunilany",
+            "config": {}
+          }
+        ],
+        "customSecurityPolicy": {
+          "Version": "2012-10-17",
+          "Statement": []
+        }
+      }
+    },
+    "rootNode": "bf41ff69-a368-48b9-92c2-68a81357b46c",
+    "openFiles": [
+      "86a4d05c-439c-4779-a668-3d79592d23aa"
+    ],
+    "currentFileId": "86a4d05c-439c-4779-a668-3d79592d23aa",
+    "resources": {
+      "ses-indunil@adroitlogic.com": {
+        "name": "ses-indunil@adroitlogic.com",
+        "type": "SES",
+        "config": {
+          "selectedIdentity": "indunil@adroitlogic.com",
+          "projectRegion": "us-east-1",
+          "params": {
+            "to": "indunil@adroitlogic.com",
+            "cc": "",
+            "bcc": "",
+            "subject": "to test merge ",
+            "body": {
+              "text": "meth with kkkkk",
+              "html": ""
+            }
+          }
+        }
+      },
+      "apigusEast1sachithraAPInameindunilany": {
+        "name": "apigusEast1sachithraAPInameindunilany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "sachithraAPIname",
+          "apiId": "052p9kjn18",
+          "endpointType": "REGIONAL",
+          "rootResourceId": "zrjp6rdv3b",
+          "existingResources": {
+            "/indunil": "gv2c1w",
+            "/indunil/qa/tst": "r6hp77",
+            "/indunil/qa": "yptvr5",
+            "/": "zrjp6rdv3b"
+          },
+          "resourceMode": 1,
+          "resourcePath": "/indunil",
+          "resourceName": "indunil",
+          "resourceId": "gv2c1w",
+          "restMethod": "ANY",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "Test",
+          "stageDeploymentId": "pajn7f",
+          "mode": 1
+        }
+      },
+      "s3testindunil1": {
+        "name": "s3testindunil1",
+        "type": "S3",
+        "config": {
+          "mode": 1,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "test.indunil1"
+          }
+        }
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "javascript",
+          "version": "2.176.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "testwithkumuu",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1568283790377
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "testwithkumuu",
+      "url": "https://github.com/Indunil1992/testwithkumuu"
+    }
+  }
+}
