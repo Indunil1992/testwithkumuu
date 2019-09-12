@@ -8,7 +8,9 @@
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "86a4d05c-439c-4779-a668-3d79592d23aa"
+          "86a4d05c-439c-4779-a668-3d79592d23aa",
+          "d588bdfd-8c78-4c22-b8f4-c18fc54d502c",
+          "cd250c69-d858-437c-8115-ba9fda6f6354"
         ],
         "isRemovable": false,
         "filePath": "testwithkumuu"
@@ -35,13 +37,45 @@
           "Version": "2012-10-17",
           "Statement": []
         }
+      },
+      "d588bdfd-8c78-4c22-b8f4-c18fc54d502c": {
+        "id": "d588bdfd-8c78-4c22-b8f4-c18fc54d502c",
+        "parent": "bf41ff69-a368-48b9-92c2-68a81357b46c",
+        "name": "newFF.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "testwithkumuu/newFF.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "cd250c69-d858-437c-8115-ba9fda6f6354": {
+        "id": "cd250c69-d858-437c-8115-ba9fda6f6354",
+        "parent": "bf41ff69-a368-48b9-92c2-68a81357b46c",
+        "name": "newf.js",
+        "type": "JS_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "testwithkumuu/newf.js",
+        "code": ""
       }
     },
     "rootNode": "bf41ff69-a368-48b9-92c2-68a81357b46c",
     "openFiles": [
-      "86a4d05c-439c-4779-a668-3d79592d23aa"
+      "86a4d05c-439c-4779-a668-3d79592d23aa",
+      "d588bdfd-8c78-4c22-b8f4-c18fc54d502c",
+      "cd250c69-d858-437c-8115-ba9fda6f6354"
     ],
-    "currentFileId": "86a4d05c-439c-4779-a668-3d79592d23aa",
+    "currentFileId": "d588bdfd-8c78-4c22-b8f4-c18fc54d502c",
     "resources": {
       "ses-indunil@adroitlogic.com": {
         "name": "ses-indunil@adroitlogic.com",
@@ -114,6 +148,22 @@
         "shouldPersist": false,
         "displayOnly": false,
         "editable": false
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "key1",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": true
+      },
+      {
+        "lambdaId": "all",
+        "varKey": "Key2",
+        "varValue": "V2",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
       }
     ],
     "packageJSON": {
@@ -127,7 +177,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568284831844
+    "lastSave": 1568284984707
   },
   "VCS_STATE": {
     "provider": "GitHub",
